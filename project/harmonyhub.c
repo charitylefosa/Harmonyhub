@@ -49,10 +49,9 @@ int loginUser(const struct User* users, int numUsers, char* loggedInUser) {
     return 0; // If user is not found or incorrect password
 }
 
-// Recommending a song based on the selected genre
 void recommendSong(const struct Song* songs, int numSongs) {
     // Creating an array to store recommended songs
-    struct Song recommendedSongs[5];
+    struct Song recommendedSongs[10];
     int recommendedCount = 0;
 
     // Displaying available genres
@@ -67,7 +66,7 @@ void recommendSong(const struct Song* songs, int numSongs) {
     printf("Enter the genre you are looking for: ");
     scanf("%s", userGenre);
 
-    // Converting the user input genre to lowercase so all cases are recognised
+    // Convert the user input genre to lowercase
     for (int i = 0; userGenre[i]; ++i) {
         userGenre[i] = tolower(userGenre[i]);
     }
@@ -103,6 +102,7 @@ void recommendSong(const struct Song* songs, int numSongs) {
         }
     }
 }
+
 
 int  main() {
     // Seed the random number generator for variety in recommendations
