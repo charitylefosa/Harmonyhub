@@ -188,12 +188,14 @@ int  main() {
                 if (isLoggedIn) {
                     char userGenre[20];
                     printf("Enter the genre you are looking for: ");
-                    scanf("%s", userGenre);
+                    fgets(userGenre, sizeof(userGenre), stdin);
+                    userGenre[strcspn(userGenre, "\n")] = '\0'; // Remove newline character
                     recommendSong(songs, numSongs);
                 } else {
                     printf("You need to log in first.\n");
                 }
                 break;
+
 
             case 4:
                 if (isLoggedIn) {
