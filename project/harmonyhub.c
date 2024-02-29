@@ -43,10 +43,10 @@ int loginUser(const struct User* users, int numUsers, char* loggedInUser) {
     for (int i = 0; i < numUsers; ++i) {
         if (strcmp(users[i].username, username) == 0 && strcmp(users[i].password, password) == 0) {
             strcpy(loggedInUser, username);
-            return 1; // User found and login successful
+            return 1; // If user is found - login successful
         }
     }
-    return 0; // User not found or incorrect password
+    return 0; // If user is not found or incorrect password
 }
 
 // Recommending a song based on the selected genre
@@ -62,12 +62,12 @@ void recommendSong(const struct Song* songs, int numSongs) {
     printf("3. Jazz\n");
     printf("4. R&B\n");
 
-    // Get user input for the genre
+    // Getting user input for the genre
     char userGenre[20];
     printf("Enter the genre you are looking for: ");
     scanf("%s", userGenre);
 
-    // Convert the user input genre to lowercase so all cases are recognised
+    // Converting the user input genre to lowercase so all cases are recognised
     for (int i = 0; userGenre[i]; ++i) {
         userGenre[i] = tolower(userGenre[i]);
     }
@@ -85,8 +85,8 @@ void recommendSong(const struct Song* songs, int numSongs) {
             recommendedSongs[recommendedCount] = songs[i];
             recommendedCount++;
 
-            // Limit the number of recommendations to 5
-            if (recommendedCount == 5) {
+            // Limitting the number of recommendations to 10
+            if (recommendedCount == 10) {
                 break;
             }
         }
@@ -119,6 +119,26 @@ int  main() {
         {"Baya Vuya", "Rebecca Malope", "Gospel"},
         {"Unamandla", "Rebecca Malope", "Gospel"},
         {"Umoya Wam", "Rebecca Malope", "Gospel"},
+        {"Take Five", "Dave Brubeck", "Jazz"},
+        {"So What", "Miles Davis", "Jazz"},
+        {"Autumn Leaves", "Cannonball Adderley", "Jazz"},
+        {"Blue Monk", "Thelonious Monk", "Jazz"},
+        {"All Blues", "John Coltrane", "Jazz"},
+        {"Summertime", "Ella Fitzgerald", "Jazz"},
+        {"My Favorite Things", "John Coltrane", "Jazz"},
+        {"Birdland", "Weather Report", "Jazz"},
+        {"Cantaloupe Island", "Herbie Hancock", "Jazz"},
+        {"Fly Me to the Moon", "Frank Sinatra", "Jazz"},
+        {"Labantwana Ama Uber", "Semi Tee ft. Miano & Kammu Dee", "Amapiano"},
+        {"eMcimbini", "Kabza De Small & DJ Maphorisa ft. Aymos, Samthing Soweto, Mas Musiq & Myztro", "Amapiano"},
+        {"Uthando", "Soa Mattrix ft. Soulful G", "Amapiano"},
+        {"Emathandweni", "Kabza De Small ft. Aymos", "Amapiano"},
+        {"Umsebenzi Wethu", "Busta 929 & Mpura ft. Zuma, Mr JazziQ, Lady Du & Reece Madlisa", "Amapiano"},
+        {"John Wick", "De Mthuda & Ntokzin ft. Sir Trill & Da Muziqal Chef", "Amapiano"},
+        {"Focalistic Ke Star", "Focalistic ft. Vigro Deep", "Amapiano"},
+        {"Jazzidisciples (Zlele)", "Reece Madlisa & Zuma ft. Mr JazziQ & Busta 929", "Amapiano"},
+        {"Sponono", "Kabza De Small, DJ Maphorisa, Wizkid, Burna Boy & Cassper Nyovest", "Amapiano"},
+        {"Lalela", "Kwiish SA ft. De Mthuda & Njelic", "Amapiano"},
         // More songs will be added with time
     };
 
