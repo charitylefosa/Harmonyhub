@@ -32,9 +32,13 @@ Run the executable:
 
 Usage
 Registration: Users can register their account by providing a username and password. This information will be stored securely for future logins.
+
 Login: Registered users can log in using their username and password.
+
 Genre Selection: After logging in, users can specify their preferred genre by choosing from a list of available genres. If the desired genre is not available, the app will inform the user and provide an option to pick from a list of available genres.
+
 Music Recommendations: Once the genre is selected, the app will generate a list of songs within that genre and display them to the user.
+
 
 Contributing
 Contributions to the Music Recommender App are welcome! If you have any ideas for improvements or new features, feel free to open an issue or submit a pull request.
