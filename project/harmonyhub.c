@@ -64,8 +64,9 @@ void recommendSong(const struct Song* songs, int numSongs) {
     // Getting user input for the genre
     char userGenre[20];
     printf("Enter the genre you are looking for: ");
-    scanf("%s", userGenre);
-    
+    fgets(userGenre, sizeof(userGenre), stdin);
+    userGenre[strcspn(userGenre, "\n")] = '\0'; // Remove newline character
+
     // Convert the user input genre to lowercase
     for (int i = 0; userGenre[i]; ++i) {
         userGenre[i] = tolower(userGenre[i]);
