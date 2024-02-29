@@ -49,10 +49,9 @@ int loginUser(const struct User* users, int numUsers, char* loggedInUser) {
     return 0; // If user is not found or incorrect password
 }
 
-// Recommending a song based on the selected genre
 void recommendSong(const struct Song* songs, int numSongs) {
     // Creating an array to store recommended songs
-    struct Song recommendedSongs[10];
+    struct Song recommendedSongs[5];
     int recommendedCount = 0;
 
     // Displaying available genres
@@ -67,31 +66,9 @@ void recommendSong(const struct Song* songs, int numSongs) {
     printf("Enter the genre you are looking for: ");
     scanf("%s", userGenre);
 
-    // Convertting the user input genre to lowercase
+    // Convert the user input genre to lowercase
     for (int i = 0; userGenre[i]; ++i) {
         userGenre[i] = tolower(userGenre[i]);
-    }
-
-    // Map numeric input to corresponding genre name
-    if (isdigit(userGenre[0])) {
-        int genreIndex = atoi(userGenre);
-        switch (genreIndex) {
-            case 1:
-                strcpy(userGenre, "gospel");
-                break;
-            case 2:
-                strcpy(userGenre, "amapiano");
-                break;
-            case 3:
-                strcpy(userGenre, "jazz");
-                break;
-            case 4:
-                strcpy(userGenre, "r&b");
-                break;
-            default:
-                printf("Invalid genre selection.\n");
-                return;
-        }
     }
 
     // Loop through the songs to find recommendations
@@ -107,8 +84,8 @@ void recommendSong(const struct Song* songs, int numSongs) {
             recommendedSongs[recommendedCount] = songs[i];
             recommendedCount++;
 
-            // Limitting the number of recommendations to 10
-            if (recommendedCount == 10) {
+            // Limit the number of recommendations to 5
+            if (recommendedCount == 5) {
                 break;
             }
         }
@@ -118,13 +95,14 @@ void recommendSong(const struct Song* songs, int numSongs) {
     if (recommendedCount == 0) {
         printf("No songs found in the %s genre.\n", userGenre);
     } else {
-        // Displaying recommended songs
+        // Display recommended songs
         printf("Recommended Songs in %s:\n", userGenre);
         for (int i = 0; i < recommendedCount; ++i) {
             printf("%d. %s - %s\n", i + 1, recommendedSongs[i].title, recommendedSongs[i].artist);
         }
     }
 }
+
 
 int  main() {
     // Seed the random number generator for variety in recommendations
