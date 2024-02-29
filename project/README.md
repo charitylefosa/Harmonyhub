@@ -16,7 +16,7 @@ To run the Music Recommender App, ensure you have a C compiler installed on your
 
 Clone the repository:
 #bash#
-git clone [https://github.com/your-username/music-recommender-app.git](https://github.com/charitylefosa/Harmonyhub.git)
+git clone [https://github.com/charitylefosa/Harmonyhub.git]
 
 Navigate to the project directory:
 #bash#
