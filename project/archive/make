@@ -1,0 +1,2 @@
+harmonyhub: harmonyhub.c
+    gcc harmonyhub.c -o harmonyhub
