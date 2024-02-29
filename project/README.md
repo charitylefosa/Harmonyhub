@@ -15,30 +15,26 @@ Installation
 To run the Music Recommender App, ensure you have a C compiler installed on your system. Follow these steps to set up the project:
 
 Clone the repository:
-#bash#
 git clone [https://github.com/charitylefosa/Harmonyhub.git]
 
 Navigate to the project directory:
-#bash#
 cd project
 
 Compile the source code:
-#css#
 gcc harmonyhub.c -o harmonyhub -std=c99
 
 Run the executable:
-#bash#
 ./harmonyhub
 
 Usage
 
-Registration: Users can register their account by providing a username and password. This information will be stored securely for future logins.
+Registration: Users can register their account by providing a username and password. This information will be stored securely for future logins. 
 
 Login: Registered users can log in using their username and password.
 
 Genre Selection: After logging in, users can specify their preferred genre by choosing from a list of available genres. If the desired genre is not available, the app will inform the user and provide an option to pick from a list of available genres.
 
-Music Recommendations: Once the genre is selected, the app will generate a list of songs within that genre and display them to the user.
+Music Recommendations: Once the genre is selected, the app will generate a list of songs within that genre and display them to the user and take them back to the genre selection stage
 
 
 Contributing
