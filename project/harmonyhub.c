@@ -129,17 +129,13 @@ int  main() {
         {"Birdland", "Weather Report", "Jazz"},
         {"Cantaloupe Island", "Herbie Hancock", "Jazz"},
         {"Fly Me to the Moon", "Frank Sinatra", "Jazz"},
-        {"Labantwana Ama Uber", "Semi Tee ft. Miano & Kammu Dee", "Amapiano"},
-        {"eMcimbini", "Kabza De Small & DJ Maphorisa ft. Aymos, Samthing Soweto, Mas Musiq & Myztro", "Amapiano"},
-        {"Uthando", "Soa Mattrix ft. Soulful G", "Amapiano"},
-        {"Emathandweni", "Kabza De Small ft. Aymos", "Amapiano"},
-        {"Umsebenzi Wethu", "Busta 929 & Mpura ft. Zuma, Mr JazziQ, Lady Du & Reece Madlisa", "Amapiano"},
-        {"John Wick", "De Mthuda & Ntokzin ft. Sir Trill & Da Muziqal Chef", "Amapiano"},
-        {"Focalistic Ke Star", "Focalistic ft. Vigro Deep", "Amapiano"},
-        {"Jazzidisciples (Zlele)", "Reece Madlisa & Zuma ft. Mr JazziQ & Busta 929", "Amapiano"},
-        {"Sponono", "Kabza De Small, DJ Maphorisa, Wizkid, Burna Boy & Cassper Nyovest", "Amapiano"},
-        {"Lalela", "Kwiish SA ft. De Mthuda & Njelic", "Amapiano"},
-        // More songs will be added with time
+        {"Labantwana Ama Uber", "Semi Tee", "Amapiano"}, // Shortened artist names
+        {"eMcimbini", "Kabza De Small", "Amapiano"},
+        {"Uthando", "Soa Mattrix", "Amapiano"},
+        {"Emathandweni", "Kabza De Small", "Amapiano"},
+        {"Umsebenzi Wethu", "Busta 929", "Amapiano"},
+        {"John Wick", "De Mthuda", "Amapiano"},
+        {"Sponono", "Kabza De Small", "Amapiano"},
     };
 
     int numSongs = sizeof(songs) / sizeof(songs[0]);
